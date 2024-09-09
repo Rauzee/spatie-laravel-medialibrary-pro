@@ -1,19 +1,10 @@
 {
-    "name": "spatie/laravel-medialibrary-pro",
+    "name": "rauzee/laravel-medialibrary-pro",
     "description": "Handle media in a Laravel app",
     "keywords": [
-        "spatie",
         "laravel-medialibrary-pro"
     ],
-    "homepage": "https://github.com/spatie/laravel-medialibrary-pro",
-    "authors": [
-        {
-            "name": "Freek Van der Herten",
-            "email": "freek@spatie.be",
-            "homepage": "https://spatie.be",
-            "role": "Developer"
-        }
-    ],
+    "authors": [],
     "require": {
         "php": "^8.2",
         "ext-json": "*",

@@ -1,14 +1,13 @@
 {
-    "name": "@spatie/media-library-pro-core",
+    "name": "@rauzee/media-library-pro-core",
     "version": "1.3.0",
-    "author": "Adriaan Marain <adriaan@spatie.be>",
     "homepage": "https://medialibrary.pro",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com/spatie/laravel-medialibrary-pro.git",
+        "url": "ssh://git@github.com/rauzee/laravel-medialibrary-pro.git",
         "directory": "resources/js/media-library-pro-core"
     },
     "main": "dist/index.js",
