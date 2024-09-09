@@ -1,6 +1,6 @@
 {
     "name": "@rauzeebr/media-library-pro-vue3",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "homepage": "https://medialibrary.pro",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
@@ -21,7 +21,7 @@
         "run-link": "yarn link"
     },
     "dependencies": {
-        "@rauzeebr/media-library-pro-core": "^1.4.3",
+        "@rauzeebr/media-library-pro-core": "^1.4.4",
         "lodash": "^4.17.15"
     },
     "peerDependencies": {
