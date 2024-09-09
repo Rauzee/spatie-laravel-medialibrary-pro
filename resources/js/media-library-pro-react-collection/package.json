@@ -1,14 +1,13 @@
 {
-    "name": "@spatie/media-library-pro-react-collection",
+    "name": "@rauzeebr/media-library-pro-react-collection",
     "version": "1.4.2",
-    "author": "Adriaan Marain <adriaan@spatie.be>",
     "homepage": "https://medialibrary.pro",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com/spatie/laravel-medialibrary-pro.git",
+        "url": "ssh://git@github.com/Rauzee/spatie-laravel-medialibrary-pro.git",
         "directory": "resources/js/media-library-pro-react-collection"
     },
     "main": "dist/index.cjs",
@@ -23,7 +22,7 @@
         "run-link": "yarn link"
     },
     "dependencies": {
-        "@spatie/media-library-pro-react": "^1.4.2",
+        "@rauzeebr/media-library-pro-react": "^1.4.2",
         "react-sortablejs": "^6.1.4",
         "sortablejs": "^1.15.2"
     },
