@@ -1,6 +1,6 @@
 {
     "name": "@rauzeebr/media-library-pro-styles",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
     },

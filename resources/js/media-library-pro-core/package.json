@@ -1,6 +1,6 @@
 {
     "name": "@rauzeebr/media-library-pro-core",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "homepage": "https://medialibrary.pro",
     "publishConfig": {
         "registry": "https://npm.pkg.github.com"
