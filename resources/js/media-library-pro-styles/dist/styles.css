@@ -1,5 +1,4 @@
 /* Component level reset. Explicitly for item during cloning */
-
 .media-library,
 .media-library *,
 .media-library-item * {

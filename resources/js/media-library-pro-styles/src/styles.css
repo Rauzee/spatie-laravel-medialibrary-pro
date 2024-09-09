@@ -4,9 +4,6 @@
 .media-library-item * {
     all: unset;
     @apply relative;
-    @apply box-border;
-    @apply border-solid;
-    @apply border-0;
 }
 
 /* `all:unset` for sortable rows in Vue 3 does too much */
