@@ -1,0 +1,78 @@
+#!/usr/bin/env php
+<?php
+
+$sourceDirectory = './docsUncompiled';
+$destinationDirectory = './docs';
+
+$excludes = [
+    '_partials',
+    'images',
+];
+
+removeOldFiles($destinationDirectory, $excludes);
+compileMdFiles($sourceDirectory, $destinationDirectory, $excludes);
+
+function removeOldFiles(string $destinationDirectory, array $excludes): void
+{
+    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($destinationDirectory));
+
+    foreach ($iterator as $file) {
+        if ($file->isDir()) continue;
+
+        foreach ($excludes as $exclude) {
+            if (str_starts_with($file->getPathname(), $destinationDirectory . '/' . $exclude) !== false) {
+                continue 2;
+            }
+        }
+
+        unlink($file->getPathname());
+    }
+}
+
+function compileMdFiles(string $sourceDirectory, string $destinationDirectory, array $excludes = []): void
+{
+    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($sourceDirectory));
+
+    foreach ($iterator as $file) {
+        if ($file->isDir()) continue;
+
+        foreach ($excludes as $exclude) {
+            if (str_starts_with($file->getPathname(), $sourceDirectory . '/' . $exclude) !== false) {
+                continue 2;
+            }
+        }
+
+        processFile($file->getPathname(), $sourceDirectory, $destinationDirectory);
+    }
+}
+
+function processFile(string $path, string $sourceDirectory, string $destinationDirectory): void {
+    $relativePath = str_replace($sourceDirectory, '', $path);
+    $destinationPath = $destinationDirectory . $relativePath;
+
+    $content = file_get_contents($path);
+
+    $content = preg_replace_callback(
+        '/!\((.*?)\.md\)/',
+        function ($matches) use ($sourceDirectory) {
+            $partialPath = $sourceDirectory . '/' . $matches[1] . '.md';
+
+            if (file_exists($partialPath)) {
+                return file_get_contents($partialPath);
+            } else {
+                return $matches[0];
+            }
+        },
+        $content
+    );
+
+    $destinationDir = dirname($destinationPath);
+
+    if (!is_dir($destinationDir)) {
+        mkdir($destinationDir);
+    }
+
+    file_put_contents($destinationPath, $content);
+
+    echo "Compiled {$path}\n";
+}
