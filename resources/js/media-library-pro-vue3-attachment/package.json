@@ -1,5 +1,5 @@
 {
-    "name": "@rauzee/media-library-pro-vue3-attachment",
+    "name": "@rauzeebr/media-library-pro-vue3-attachment",
     "version": "1.3.0",
     "homepage": "https://medialibrary.pro",
     "publishConfig": {
@@ -7,7 +7,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com/rauzee/laravel-medialibrary-pro.git",
+        "url": "ssh://git@github.com/Rauzee/laravel-medialibrary-pro.git",
         "directory": "resources/js/media-library-pro-vue3-attachment"
     },
     "main": "dist/index.js",
@@ -19,8 +19,8 @@
         "run-link": "yarn link"
     },
     "dependencies": {
-        "@rauzee/media-library-pro-core": "^1.3.0",
-        "@rauzee/media-library-pro-vue3": "^1.3.0"
+        "@rauzeebr/media-library-pro-core": "^1.3.0",
+        "@rauzeebr/media-library-pro-vue3": "^1.3.0"
     },
     "peerDependencies": {
         "vue": "^3.0.0"
